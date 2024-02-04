@@ -1,7 +1,6 @@
-class Thready extends Thread{
-	public static void main(String[] args){
-   	 Thready Thread1 = new Thready();
-    	 Thread1.setName("Rocky");
-   	 System.out.println(Thread1.getName());
-    }
+#include<stdio.h>
+int main()
+{
+printf("The size of int in windows and linux : %ld\n",sizeof(int));
+return 0;
 }
