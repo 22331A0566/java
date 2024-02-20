@@ -42,3 +42,4 @@ int main()
     Student student2 = student1;
     cout <<"Student-1 Details" << endl;
     student1.display();
+}
