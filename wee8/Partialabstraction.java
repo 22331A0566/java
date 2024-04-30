@@ -1,39 +1,29 @@
-#include <iostream>
+import java.util.Scanner;
 
-using namespace std;
+abstract class Chocolate {
+    public void chocolateType() {
+        System.out.println("Dairy Milk chocolate");
+    }
 
-class Vehicle {
-protected:
-  string make;
-  string model;
-  int year;
+    abstract void brand();
+    abstract void cost();
+}
 
-public:
-  Vehicle(string make, string model, int year) {
-    this->make = make;
-    this->model = model;
-    this->year = year;
-  }
+class DairyMilk extends Chocolate {
+    public void brand() {
+        System.out.println("It's Dairy Milk brand");
+    }
 
-  virtual void print() {
-    cout << "Vehicle: " << make << " " << model << " " << year << endl;
-  }
-};
+    public void cost() {
+        System.out.println("Below 250 Rs");
+    }
+}
 
-class Car : public Vehicle {
-public:
-  Car(string make, string model, int year) : Vehicle(make, model, year) {}
-
-  void print() override {
-    cout << "Car: " << make << " " << model << " " << year << endl;
-  }
-};
-
-int main() {
-  Vehicle* vehicle = new Car("Toyota", "Camry", 2020);
-  vehicle->print();
-
-  delete vehicle;
-
-  return 0;
+public class Partial {
+    public static void main(String args[]) {
+        DairyMilk obj = new DairyMilk();
+        obj.chocolateType();
+        obj.brand();
+        obj.cost();
+    }
 }
