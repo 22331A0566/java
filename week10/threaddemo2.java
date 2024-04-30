@@ -10,9 +10,9 @@ public class threaddemo2 implements Runnable {
     	System.out.println("thread execution started");
 	}
 	public static void main(String args[]){
-    	threaddemo2 obj=new threaddemo2("gayi");
+    	threaddemo2 obj=new threaddemo2("Harshi");
     	Thread t1=new Thread(obj);
-    	//Thread t2=new Thread("yamu");
+    	//Thread t2=new Thread("Keer");
     	t1.run();
     	t1.start();
 	}
